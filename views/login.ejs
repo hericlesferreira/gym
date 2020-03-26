@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include('imports') %>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <div class="container">
+
+			<div>
+				<img class="img" src="../img/img-home.svg" alt="">
+			</div>
+
+			<div class="login-container">
+				<div class="img">
+					<img class="img-avatar" src="../img/avatar.svg" alt="">
+				</div>
+				<form action="login.ejs">
+					<div class="one">
+						<i class="fas fa-user"></i>
+						<input type="text">
+					</div>
+					<div class="two">
+						<i class="fas fa-lock"></i>
+						<input type="password">
+					</div>
+					<input type="submit" value="login">
+				</form>
+			</div>
+
+		</div>
+  </body>
+</html>
