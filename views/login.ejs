@@ -2,35 +2,73 @@
 <html>
   <head>
     <title><%= title %></title>
-    <%- include('imports') %>
+		<%- include('imports') %>
+		<link rel="stylesheet" href="/stylesheets/login_style.css">
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-
     <div class="container">
 
-			<div>
-				<img class="img" src="../img/img-home.svg" alt="">
+			<div class="app-bar">
+				<img src="../img/avatar.svg" alt="" />
+			</div>
+
+			<div class="img-login-home">
+				<img src="../img/img-home.svg" alt="">
 			</div>
 
 			<div class="login-container">
-				<div class="img">
+				<form action="ROTA POST PARA LOGIN" method="POST">
 					<img class="img-avatar" src="../img/avatar.svg" alt="">
-				</div>
-				<form action="login.ejs">
-					<div class="one">
-						<i class="fas fa-user"></i>
-						<input type="text">
+					<h2>Olá, <%= userType %></h2>
+					
+					<div class="one input-div focus">
+						<div class="i">
+							<i class="fas fa-envelope"></i>
+						</div>
+						<div>
+							<h5>Email</h5>
+							<input class="input" type="text">
+						</div>
 					</div>
-					<div class="two">
-						<i class="fas fa-lock"></i>
-						<input type="password">
+
+					<div class="two input-div focus">
+						<div class="i">
+							<i class="fas fa-lock"></i>
+						</div>
+						<div>
+							<h5>Senha</h5>
+							<input class="input" type="password">
+						</div>
 					</div>
-					<input type="submit" value="login">
+					<a href="#">Esqueceu a senha?</a>
+					<input type="submit" class="btn-login" value="Entrar">
 				</form>
 			</div>
 
 		</div>
+
+		<script>
+			const inputs = document.querySelectorAll(".input");
+
+			function focusFunc(){
+				let parent = this.parentNode.parentNode;
+				parent.classList.add("focus");
+			}
+
+			function blurFunc(){
+				let parent = this.parentNode.parentNode;
+
+				if(this.value ==""){
+					parent.classList.remove("focus");
+				}
+			}
+
+			inputs.forEach(input => {
+				input.addEventListener("focus", focusFunc);
+				input.addEventListener("blur", blurFunc);
+			});
+
+		</script>
+
   </body>
 </html>
