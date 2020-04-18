@@ -16,13 +16,13 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #9e52ff;
+  background-color: #9724B9;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 
 .app-bar img {
-  width: 45px;
-  margin-top: 2px !important;
-}
+  height: 30px;
+  margin-top: 10px !important;
+} 
