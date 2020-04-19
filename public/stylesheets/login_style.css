@@ -1,4 +1,4 @@
-.container{
+.login-content{
 	width: 100vw !important;
 	height: 100vh !important;
 	display: grid !important;
@@ -107,6 +107,7 @@ form{
 	color: #999;
 	font-size: 18px;
 	transition: .3s;
+	z-index: 1;
 }
 
 .input{
@@ -120,6 +121,7 @@ form{
 	padding: 0.5rem 0.7rem;
 	font-size: 1.2rem;
 	color: #555;
+	background-color: none;
 }
 
 a {

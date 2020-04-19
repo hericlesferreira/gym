@@ -10,4 +10,8 @@ router.get('/login', function(req, res, next){
   res.render('login', { title: 'Login', userType: 'Fail' });
 });
 
+router.get('/app', function(req, res, next){
+  res.render('application', { title: 'App' });
+});
+
 module.exports = router;
